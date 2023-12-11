@@ -40,7 +40,7 @@ jobs:
         if: inputs.bump-versions-branch != ''
         uses: actions/checkout@v4
         with:
-          ref: inputs.bump-versions-branch
+          ref: ${{ inputs.bump-versions-branch }}
           path: providers-and-modules
 
       - name: check providers and modules
