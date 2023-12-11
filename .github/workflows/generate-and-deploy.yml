@@ -12,7 +12,8 @@ on:
           - Production
       bump-versions-branch:
         type: string
-        description: The branch the generated files
+        description: The branch with the modules and providers to publish
+        required: false
   workflow_call:
     inputs:
       environment:
@@ -32,18 +33,35 @@ jobs:
 
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          path: main
+
+      - name: Checkout branch with modules and providers
+        if: inputs.bump-versions-branch != ''
+        uses: actions/checkout@v4
+        with:
+          path: providers-and-modules
 
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version-file: './src/go.mod'
+          go-version-file: './main/src/go.mod'
 
       - name: Setup dependencies
         run: sudo apt-get install rclone
 
       - name: Run Generation script
-        working-directory: ./src
-        run: go run ./cmd/generate-v1 --destination ../generated
+        working-directory: ./main/src
+        run: |
+          PATH_PREFIX="../../providers-and-modules"
+          
+          if [ -z "${{ inputs.bump-versions-branch }}"]; then
+            export DATA_DIR_FLAGS=""
+          else
+            export DATA_DIR_FLAGS="--module-data \"$PATH_PREFIX/modules\" --provider-data \"$PATH_PREFIX/providers\" --key-data \"$PATH_PREFIX/keys\""
+          fi
+          
+          go run ./cmd/generate-v1 --destination ../generated $DATA_DIR_FLAGS
         env:
            GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
