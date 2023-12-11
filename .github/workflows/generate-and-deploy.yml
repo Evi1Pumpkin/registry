@@ -51,9 +51,9 @@ jobs:
         run: sudo apt-get install rclone
 
       - name: Run Generation script
-        working-directory: ./main/src
+#        working-directory: ./main/src
         run: |
-          PATH_PREFIX="../../providers-and-modules"
+          PATH_PREFIX="./providers-and-modules"
           
           if [ -z "${{ inputs.bump-versions-branch }}"]; then
             export DATA_DIR_FLAGS=""
@@ -61,7 +61,7 @@ jobs:
             export DATA_DIR_FLAGS="--module-data \"$PATH_PREFIX/modules\" --provider-data \"$PATH_PREFIX/providers\" --key-data \"$PATH_PREFIX/keys\""
           fi
           
-          go run ./cmd/generate-v1 --destination ../generated $DATA_DIR_FLAGS
+          go run ./main/src/cmd/generate-v1 --destination ./generated $DATA_DIR_FLAGS
         env:
            GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
