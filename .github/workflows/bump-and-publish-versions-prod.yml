@@ -14,5 +14,6 @@ jobs:
   publish-versions:
     needs: bump-versions
     uses: Evi1Pumpkin/registry/.github/workflows/generate-and-deploy.yml@main
+    secrets: inherit
     with:
       environment: "Production"
