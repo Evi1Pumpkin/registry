@@ -10,6 +10,9 @@ on:
         options:
           - Development
           - Production
+      bump-versions-branch:
+        type: string
+        description: The branch the generated files
   workflow_call:
     inputs:
       environment:
@@ -24,6 +27,9 @@ jobs:
       name: ${{ inputs.environment }}
 
     steps:
+      - name: curr env is
+        run: echo ${{ vars.CURR_ENV }}
+
       - name: Checkout Repository
         uses: actions/checkout@v4
 

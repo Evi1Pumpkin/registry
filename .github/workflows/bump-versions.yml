@@ -27,6 +27,9 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
+      - name: curr env is
+        run: echo ${{ vars.CURR_ENV }}
+
       - name: Checkout Repository
         uses: actions/checkout@v4
 
