@@ -19,7 +19,8 @@ jobs:
   bump-versions:
     runs-on: ubuntu-latest
 
-    environment: ${{ inputs.environment }}
+    environment:
+      name: ${{ inputs.environment }}
     permissions:
       contents: write
       actions: write
