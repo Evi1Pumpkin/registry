@@ -39,6 +39,7 @@ jobs:
         run: go run ./cmd/bump-versions
 
       - name: Get branch
+        id: get-branch
         run: |
           if [ "${{ inputs.environment }}" = "Production" ]; then
             export BRANCH="${{ github.ref }}"
@@ -46,11 +47,16 @@ jobs:
             TIMESTAMP=$(date +%s)
             export BRANCH="${{ github.ref }}-bump-versions-$TIMESTAMP"
           fi
-          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+          echo "BRANCH=$BRANCH" >> $GITHUB_OUTPUT
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           file_pattern: 'modules/**/* providers/**/*'
           commit_user_name: Auto Version Bumper
-          branch: ${{ env.BRANCH }}
+          branch: ${{ steps.get-branch.outputs.BRANCH }}
           create_branch: true
+
+      - name: Print Branch name
+        run: |
+          echo "Providers and modules changes were pushed to branch: ${{ steps.get-branch.outputs.BRANCH }}"
+
