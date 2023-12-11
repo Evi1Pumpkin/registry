@@ -2,13 +2,25 @@
 name: Generate and Sync Files
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: The environment of the Registry
+        options:
+          - Development
+          - Production
+  workflow_call:
+    inputs:
+      environment:
+        type: string
+        description: The environment of the Registry
 
 jobs:
   generate-and-sync:
     runs-on: ubuntu-latest
-
-    environment: Production
+    environment:
+      name: ${{ inputs.environment }}
 
     steps:
       - name: Checkout Repository
