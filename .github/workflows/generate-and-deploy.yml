@@ -56,12 +56,12 @@ jobs:
           if [ -z "${{ inputs.bump-versions-branch }}" ]; then
             export DATA_DIR_FLAGS=""
           else
-            export DATA_DIR_FLAGS="--module-data \"$PATH_PREFIX/modules\" --provider-data \"$PATH_PREFIX/providers\" --key-data \"$PATH_PREFIX/keys\""
+            export DATA_DIR_FLAGS="--module-data $PATH_PREFIX/modules --provider-data $PATH_PREFIX/providers --key-data $PATH_PREFIX/keys"
           fi
           
           ls ../../providers-and-modules/providers/0/0UserName
-          echo "go run ./cmd/generate-v1 --destination \"../../generated\" $DATA_DIR_FLAGS"
-          go run ./cmd/generate-v1 --destination "../../generated" $DATA_DIR_FLAGS
+          echo "go run ./cmd/generate-v1 --destination ../../generated $DATA_DIR_FLAGS"
+          go run ./cmd/generate-v1 --destination ../../generated $DATA_DIR_FLAGS
         env:
            GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
