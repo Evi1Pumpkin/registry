@@ -7,14 +7,14 @@ on:
       environment:
         type: string
         description: The environment of the Registry
-#  workflow_dispatch:
-#    inputs:
-#      environment:
-#        type: choice
-#        description: The environment of the Registry
-#        options:
-#          - Development
-#          - Production
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: The environment of the Registry
+        options:
+          - Development
+          - Production
 
 jobs:
   generate-and-sync:
