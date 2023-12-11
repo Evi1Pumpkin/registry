@@ -28,9 +28,6 @@ jobs:
       name: ${{ inputs.environment }}
 
     steps:
-      - name: curr env is
-        run: echo ${{ vars.CURR_ENV }}
-
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
@@ -66,7 +63,7 @@ jobs:
             export DATA_DIR_FLAGS="--module-data \"$PATH_PREFIX/modules\" --provider-data \"$PATH_PREFIX/providers\" --key-data \"$PATH_PREFIX/keys\""
           fi
           
-          go run ./cmd/generate-v1 --destination "../../generated" "$DATA_DIR_FLAGS"
+          go run ./cmd/generate-v1 --destination "../../generated" $DATA_DIR_FLAGS
         env:
            GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
