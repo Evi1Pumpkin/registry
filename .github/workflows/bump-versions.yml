@@ -6,21 +6,20 @@ on:
       environment:
         type: string
         description: The environment of the Registry
-  workflow_dispatch:
-    inputs:
-      environment:
-        type: choice
-        description: The environment of the Registry
-        options:
-          - Development
-          - Production
+#  workflow_dispatch:
+#    inputs:
+#      environment:
+#        type: choice
+#        description: The environment of the Registry
+#        options:
+#          - Development
+#          - Production
 
 jobs:
   bump-versions:
     runs-on: ubuntu-latest
 
-    environment:
-      name: ${{ inputs.environment }}
+    environment: ${{ github.event.inputs.environment }}
     permissions:
       contents: write
       actions: write
@@ -40,11 +39,10 @@ jobs:
         run: go run ./cmd/bump-versions
 
       - name: Get branch
-        id: get-branch
         run: |
-          if [ "${{ inputs.environment }}" = "Production" ]; then
-            export BRANCH="${{ github.ref }}"
-          elif [ "${{ inputs.environment }}" = "Development" ]; then
+          if [ "${{ github.event.inputs.environment }}" = "Production" ]; then
+            export BRANCH=${{ github.ref }}
+          elif [ "${{ github.event.inputs.environment }}" = "Development" ]; then
             TIMESTAMP=$(date +%s)
             export BRANCH="${{ github.ref }}-bump-versions-$TIMESTAMP"
           fi
@@ -54,9 +52,5 @@ jobs:
         with:
           file_pattern: 'modules/**/* providers/**/*'
           commit_user_name: Auto Version Bumper
-          branch: ${{ env.BRANCH }}
+          branch: ${{ $BRANCH }}
           create_branch: true
-
-      - name: Print Branch name
-        run: |
-          echo "Providers and modules changes were pushed to branch: ${{ env.BRANCH }}"
