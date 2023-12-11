@@ -40,6 +40,7 @@ jobs:
         if: inputs.bump-versions-branch != ''
         uses: actions/checkout@v4
         with:
+          ref: inputs.bump-versions-branch
           path: providers-and-modules
 
       - name: check providers and modules
@@ -59,13 +60,13 @@ jobs:
         run: |
           PATH_PREFIX="../../providers-and-modules"
           
-          if [ -z "${{ inputs.bump-versions-branch }}"]; then
+          if [ -z "${{ inputs.bump-versions-branch }}" ]; then
             export DATA_DIR_FLAGS=""
           else
             export DATA_DIR_FLAGS="--module-data \"$PATH_PREFIX/modules\" --provider-data \"$PATH_PREFIX/providers\" --key-data \"$PATH_PREFIX/keys\""
           fi
           
-          go run ./cmd/generate-v1 --destination "../../generated" $DATA_DIR_FLAGS
+          go run ./cmd/generate-v1 --destination "../../generated" "$DATA_DIR_FLAGS"
         env:
            GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
