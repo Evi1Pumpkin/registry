@@ -12,7 +12,7 @@ on:
           - Production
       bump-versions-branch:
         type: string
-        description: The branch with the modules and providers to publish
+        description: The branch with the modules and providers to publish (if not specified will use the workflow's branch)
         required: false
   workflow_call:
     inputs:
@@ -54,13 +54,11 @@ jobs:
           PATH_PREFIX="../../providers-and-modules"
           
           if [ -z "${{ inputs.bump-versions-branch }}" ]; then
-            export DATA_DIR_FLAGS=""
+            DATA_DIR_FLAGS=""
           else
-            export DATA_DIR_FLAGS="--module-data $PATH_PREFIX/modules --provider-data $PATH_PREFIX/providers --key-data $PATH_PREFIX/keys"
+            DATA_DIR_FLAGS="--module-data $PATH_PREFIX/modules --provider-data $PATH_PREFIX/providers --key-data $PATH_PREFIX/keys"
           fi
           
-          ls ../../providers-and-modules/providers/0/0UserName
-          echo "go run ./cmd/generate-v1 --destination ../../generated $DATA_DIR_FLAGS"
           go run ./cmd/generate-v1 --destination ../../generated $DATA_DIR_FLAGS
         env:
            GH_TOKEN: ${{ secrets.GH_TOKEN }}
