@@ -19,7 +19,7 @@ jobs:
   bump-versions:
     runs-on: ubuntu-latest
 
-    environment: ${{ github.event.inputs.environment }}
+    environment: ${{ inputs.environment }}
     permissions:
       contents: write
       actions: write
