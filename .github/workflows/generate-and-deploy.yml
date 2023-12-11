@@ -43,6 +43,7 @@ jobs:
       - name: check providers and modules
         run: |
           ls ./providers-and-modules
+          ls ./providers-and-modules/providers
 
       - name: Set up Go
         uses: actions/setup-go@v4
