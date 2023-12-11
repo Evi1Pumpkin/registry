@@ -1,4 +1,4 @@
-name: Bump Provider and Module Versions and Publish
+name: Bump Versions and Publish
 
 on:
   schedule:

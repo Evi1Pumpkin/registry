@@ -2,11 +2,6 @@
 name: Generate and Sync Files
 
 on:
-  workflow_call:
-    inputs:
-      environment:
-        type: string
-        description: The environment of the Registry
   workflow_dispatch:
     inputs:
       environment:
@@ -15,6 +10,11 @@ on:
         options:
           - Development
           - Production
+  workflow_call:
+    inputs:
+      environment:
+        type: string
+        description: The environment of the Registry
 
 jobs:
   generate-and-sync:
