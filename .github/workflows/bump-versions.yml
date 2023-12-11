@@ -40,9 +40,9 @@ jobs:
 
       - name: Get branch
         run: |
-          if [ "${{ github.event.inputs.environment }}" = "Production" ]; then
-            export BRANCH=${{ github.ref }}
-          elif [ "${{ github.event.inputs.environment }}" = "Development" ]; then
+          if [ "${{ inputs.environment }}" = "Production" ]; then
+            export BRANCH="${{ github.ref }}"
+          elif [ "${{ inputs.environment }}" = "Development" ]; then
             TIMESTAMP=$(date +%s)
             export BRANCH="${{ github.ref }}-bump-versions-$TIMESTAMP"
           fi
