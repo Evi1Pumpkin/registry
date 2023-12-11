@@ -59,7 +59,6 @@ jobs:
           commit_user_name: Auto Version Bumper
           branch: ${{ steps.get-branch.outputs.BRANCH }}
           create_branch: true
-          push_options: '--force'
 
       - name: Print Branch name
         run: |
