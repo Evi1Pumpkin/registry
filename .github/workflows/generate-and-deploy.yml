@@ -42,6 +42,10 @@ jobs:
         with:
           path: providers-and-modules
 
+      - name: check providers and modules
+        run: |
+          ls ./providers-and-modules
+
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
