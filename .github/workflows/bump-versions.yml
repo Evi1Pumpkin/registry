@@ -54,8 +54,8 @@ jobs:
         with:
           file_pattern: 'modules/**/* providers/**/*'
           commit_user_name: Auto Version Bumper
-#          branch: ${{ env.BRANCH }}
-#          create_branch: true
+          branch: ${{ env.BRANCH }}
+          create_branch: true
 
       - name: Print Branch name
         run: |
