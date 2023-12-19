@@ -1,6 +1,222 @@
 {
   "versions": [
     {
+      "version": "0.2.18",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.18/terraform-provider-data-tools_0.2.18_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.18/terraform-provider-data-tools_0.2.18_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-data-tools_0.2.18_darwin_amd64.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.18/terraform-provider-data-tools_0.2.18_darwin_amd64.zip",
+          "shasum": "7c901a923d7199c404ac27eabd7e8a463af02334c2372430145672a896e42502"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-data-tools_0.2.18_darwin_arm64.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.18/terraform-provider-data-tools_0.2.18_darwin_arm64.zip",
+          "shasum": "03a69f610131dbd3ed28dabdc643bcc26111e7389324e25924ab2669028e861f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-data-tools_0.2.18_freebsd_386.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.18/terraform-provider-data-tools_0.2.18_freebsd_386.zip",
+          "shasum": "6c5da08ac3b79cc351c8b33a67c9fa339614ea412545af67605b5f74bdfaa33f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-data-tools_0.2.18_freebsd_amd64.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.18/terraform-provider-data-tools_0.2.18_freebsd_amd64.zip",
+          "shasum": "d7e459155d4c6438e46b9efe66f1fe41862e495837cd7fd6e5f76e4743866720"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-data-tools_0.2.18_freebsd_arm.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.18/terraform-provider-data-tools_0.2.18_freebsd_arm.zip",
+          "shasum": "45b4b026badf42060d6399ca2da07e3260a91d5e2aae879a702cabd8f02c38a6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-data-tools_0.2.18_freebsd_arm64.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.18/terraform-provider-data-tools_0.2.18_freebsd_arm64.zip",
+          "shasum": "24c39d7d674ee3171446135ae0f6d921d58ea47fffb5333a3df068f4895e0f5c"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-data-tools_0.2.18_linux_386.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.18/terraform-provider-data-tools_0.2.18_linux_386.zip",
+          "shasum": "5d70a7950d2aba6c5ff54245d0e6d0f273806a743af4b16d0480ae521bec05a4"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-data-tools_0.2.18_linux_amd64.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.18/terraform-provider-data-tools_0.2.18_linux_amd64.zip",
+          "shasum": "a1b8cd3757fb19277d583b6a5c580b1be3e3f48b0316d70582973f193e424632"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-data-tools_0.2.18_linux_arm.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.18/terraform-provider-data-tools_0.2.18_linux_arm.zip",
+          "shasum": "e7d94e25727c7f19c6876a35831126398f7de82ef3ccbfb1cf5858d8bcd7a852"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-data-tools_0.2.18_linux_arm64.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.18/terraform-provider-data-tools_0.2.18_linux_arm64.zip",
+          "shasum": "8a5841e72e210aadbd2ccd0d7c5ec16530652826390e762c4647e14e6202832c"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-data-tools_0.2.18_windows_386.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.18/terraform-provider-data-tools_0.2.18_windows_386.zip",
+          "shasum": "46f07df5f97d5d68902ecbfa2d24eb9162b92152b69864c9fc3b6fb3d64b3447"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-data-tools_0.2.18_windows_amd64.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.18/terraform-provider-data-tools_0.2.18_windows_amd64.zip",
+          "shasum": "bef25f2ab0aca0ff48b44c8f68c2eed844b68d55e282ae1b72d72f2eabd27d95"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-data-tools_0.2.18_windows_arm.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.18/terraform-provider-data-tools_0.2.18_windows_arm.zip",
+          "shasum": "a618965d745aca0d4605b82531bde2bb0050d9b825378a87fbf69ae74ea15fa7"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-data-tools_0.2.18_windows_arm64.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.18/terraform-provider-data-tools_0.2.18_windows_arm64.zip",
+          "shasum": "b8cfeb8cc202ff9712a622f61dec68b782de5edd52c4ad9902b8dd4500bcbcb2"
+        }
+      ]
+    },
+    {
+      "version": "0.2.17",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.17/terraform-provider-data-tools_0.2.17_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.17/terraform-provider-data-tools_0.2.17_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-data-tools_0.2.17_darwin_amd64.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.17/terraform-provider-data-tools_0.2.17_darwin_amd64.zip",
+          "shasum": "5903004d14b73320a2c47b0f34f63386e6ba7d3234697c3c1608e43d94eb2727"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-data-tools_0.2.17_darwin_arm64.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.17/terraform-provider-data-tools_0.2.17_darwin_arm64.zip",
+          "shasum": "9085c1504bf2654f7720dc9c6dad7dbc10dd9fdfb31bb6a89478d5ea196cd8c9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-data-tools_0.2.17_freebsd_386.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.17/terraform-provider-data-tools_0.2.17_freebsd_386.zip",
+          "shasum": "170bb19550348c259235c7dd2d42034c28f48dc1e337f98a7f6dfeba569880fb"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-data-tools_0.2.17_freebsd_amd64.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.17/terraform-provider-data-tools_0.2.17_freebsd_amd64.zip",
+          "shasum": "6337cd48e72ca8f2198c001ae25ffc00ad793127814df0ae05d625be2a397662"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-data-tools_0.2.17_freebsd_arm.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.17/terraform-provider-data-tools_0.2.17_freebsd_arm.zip",
+          "shasum": "e18400095f61930218f0a51c3dfe412a9a25764488bcbc99ab5247e546fcc627"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-data-tools_0.2.17_freebsd_arm64.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.17/terraform-provider-data-tools_0.2.17_freebsd_arm64.zip",
+          "shasum": "1c22fd6788bbb9d2a3eba5cc613172d4115efe1d033a2257cf185fe0daaefcce"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-data-tools_0.2.17_linux_386.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.17/terraform-provider-data-tools_0.2.17_linux_386.zip",
+          "shasum": "0f2bfac0ba22dc3f54287f3e99ee126b52b0ae638eb1154c925e228295500382"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-data-tools_0.2.17_linux_amd64.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.17/terraform-provider-data-tools_0.2.17_linux_amd64.zip",
+          "shasum": "49788c23a7141fcbd44c469defbaf57f91acb370945ef81aeaa0bb21e7205b51"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-data-tools_0.2.17_linux_arm.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.17/terraform-provider-data-tools_0.2.17_linux_arm.zip",
+          "shasum": "acd9a71b7243b310c34fe2439dd25ef879dd10107397cdabc602ab20e3fc1047"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-data-tools_0.2.17_linux_arm64.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.17/terraform-provider-data-tools_0.2.17_linux_arm64.zip",
+          "shasum": "df45f35b5568fc8e8ed670d256f880d22394503798583c21a147ca356052a5fa"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-data-tools_0.2.17_windows_386.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.17/terraform-provider-data-tools_0.2.17_windows_386.zip",
+          "shasum": "1ab6ec4b51dfcb0013bc046ea9189b687ae4cdf16e58df177fab4e4cba36a5d1"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-data-tools_0.2.17_windows_amd64.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.17/terraform-provider-data-tools_0.2.17_windows_amd64.zip",
+          "shasum": "74f1df335e4132432eab0d1676aa6b6af2262263acca6afa4c09d0762aa198f1"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-data-tools_0.2.17_windows_arm.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.17/terraform-provider-data-tools_0.2.17_windows_arm.zip",
+          "shasum": "b6f94e96ec2f336532563edb3e072b72c2e15a851b2d18386a51c2802e00f218"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-data-tools_0.2.17_windows_arm64.zip",
+          "download_url": "https://github.com/awesomenessnil/terraform-provider-data-tools/releases/download/v0.2.17/terraform-provider-data-tools_0.2.17_windows_arm64.zip",
+          "shasum": "76ed1ea6adf731d7cb745357d38b423c26463a61d4931640014d7338642bb07c"
+        }
+      ]
+    },
+    {
       "version": "0.2.16",
       "protocols": [
         "6.0"
