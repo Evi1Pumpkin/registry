@@ -1,6 +1,9 @@
 {
   "versions": [
     {
+      "version": "v1.6.0"
+    },
+    {
       "version": "v1.5.0"
     },
     {
@@ -43,13 +46,13 @@
       "version": "0.3.1"
     },
     {
-      "version": "0.8.0"
-    },
-    {
       "version": "0.8.1"
     },
     {
       "version": "1.0.0"
+    },
+    {
+      "version": "0.7.0"
     },
     {
       "version": "0.6.0"
@@ -64,7 +67,7 @@
       "version": "0.4.0"
     },
     {
-      "version": "0.7.0"
+      "version": "0.8.0"
     },
     {
       "version": "0.0.1"
